@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 21:00:16 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entity.Course" table="Course">
+        <id name="csid" type="int">
+            <column name="csid" />
+            <generator class="native" />
+        </id>
+        <property name="csname" type="java.lang.String">
+            <column name="csname" />
+        </property>
+        <property name="cscn" type="java.lang.String">
+            <column name="cscn" />
+        </property>
+        <property name="ctn" type="java.lang.String">
+            <column name="ctn" />
+        </property>
+        <property name="sop" type="java.lang.String">
+            <column name="sop" />
+        </property>
+        <property name="check" type="java.lang.String">
+            <column name="cs" />
+        </property>
+        <property name="pass" type="java.lang.String">
+            <column name="pass" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

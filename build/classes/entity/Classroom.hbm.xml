@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 21:00:16 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entity.Classroom" table="Classroom">
+        <id name="cid" type="int">
+            <column name="cid" />
+            <generator class="native" />
+        </id>
+        <property name="cname" type="java.lang.String">
+            <column name="cname" />
+        </property>
+    </class>
+</hibernate-mapping>

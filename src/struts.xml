@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+
+	</package>
+	<package name="users" namespace="/users" extends="default">
+		<action name="*_*" class="action.{1}Action" method="{2}">
+			<result name="login_success">/users/Users_login_success.jsp</result>
+			<result name="login_failure">/users/Users_login.jsp</result>
+			<result name="loginout_success">/users/Users_login.jsp</result>
+			<result name="query_success">/users/Users_query_success.jsp</result>
+			<result name="input">/users/Users_login.jsp</result>
+			<result name="delete_success" type="chain">Users_query</result>
+			<result name="add_success">/users/Users_add_success.jsp</result>
+			<result name="modify_success">/users/Users_modify.jsp</result>
+			<result name="modifyByself_success">/users/Users_modify.jsp</result>
+			<result name="save_success">/users/Users_modify_success.jsp</result>
+		</action>
+	</package>
+    <package name="students" namespace="/students" extends="default">
+    <action name="*_*" class="action.{1}Action" method="{2}">
+			<result name="query_success">/students/Students_query_success.jsp</result>
+			<result name="add_success">/students/Students_add_success.jsp</result>
+			<result name="modify_success">/students/Students_modify.jsp</result>
+			<result name="save_success">/students/Students_modify_success.jsp</result>
+			<result name="delete_success" type="chain">/students/Students_query_success.jsp</result>
+			<result name="queryByClassroom_success">/students/Students_query_success.jsp</result>
+	</action>
+    </package>    
+    <package name="admins" namespace="/admins" extends="default">
+		<action name="*_*" class="action.{1}Action" method="{2}">
+			<result name="login_success">/admins/Admins_login_success.jsp</result>
+			<result name="login_failure">/admins/Admins_login.jsp</result>
+			<result name="loginout_success">/admins/Admins_login.jsp</result>
+			<result name="input">/admins/Admins_login.jsp</result>
+			<result name="modify_success">/admins/Admins_modify.jsp</result>
+			<result name="save_success">/admins/Admins_modify_success.jsp</result>
+		</action>
+    </package>
+    <package name="plan" namespace="/plan" extends="default">
+		<action name="*_*" class="action.{1}Action" method="{2}">
+		</action>
+    </package>
+    <package name="classroom" namespace="/classroom" extends="default">
+		<action name="*_*" class="action.{1}Action" method="{2}">
+			<result name="query_success">/classroom/classroom_query_success.jsp</result>
+			<result name="add_success">/classroom/classroom_add_success.jsp</result>
+			<result name="delete_success" type="chain">Classroom_query</result>
+		</action>
+    </package>
+    <package name="course" namespace="/course" extends="default">
+		<action name="*_*" class="action.{1}Action" method="{2}">
+			<result name="query_success">/course/course_query_success.jsp</result>
+			<result name="add_success">/course/course_add_success.jsp</result>
+			<result name="queryByClassroom_success">/course/course_query_success.jsp</result>
+			<result name="queryByTeachername_success">/course/course_query_success.jsp</result>
+			<result name="queryByCoursename_success">/course/course_query_success.jsp</result>
+			<result name="delete_success" type="chain">Course_query</result>
+			<result name="querybyUser_success">/course/course_querybtn.jsp</result>
+			<result name="queryByTn_success">/course/course_queryByUsers_success.jsp</result>
+			<result name="modify_success">/course/course_modify.jsp</result>
+			<result name="save_success">/course/course_modify_success.jsp</result>
+		</action>
+    </package>
+</struts>
